@@ -4,7 +4,7 @@ void main() {
   runApp(MaterialApp(title:'Tip Calculator', home: TipCalculator()));
 }
 
- class TipCalculator extends StatefulWidget {///cambio 
+ class TipCalculator extends StatelessWidget {///cambio 
 
 double billAmout = 0.0;
 double tipPorcentaje = 0.0;
@@ -43,25 +43,21 @@ TextField tipPorcentajeField=TextField(
       double calculatedTip = billAmout * tipPorcentaje / 100.0;
       double total = billAmout + calculatedTip;
 
-     /* AlertDialog dialog = AlertDialog(
+      AlertDialog dialog = AlertDialog(
         content: Text("Tip: \$$calculatedTip\n"
                       "Total: \$$total"));
 
             showDialog(context: context, builder:(BuildContext context)=> dialog);
-*/
 
+/*
 Center center =Center(
 child: Container(
   child: Text("Total: \$$total",style: TextStyle(fontSize: 25.0)//25 tamaño
   ),
 )
 );
+*/
 
-Stack stack = Stack(
-  children: <Widget>[
-  center
-],
-);
  
      });
 
